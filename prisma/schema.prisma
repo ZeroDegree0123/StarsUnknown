@@ -36,24 +36,26 @@ model Constellation {
 
 model Star {
   id            Int           @id @default(autoincrement())
+  starId        Int
   name          String
   description   String?
   distance      Int
   size          Int
   type          String
+  constellation Constellation @relation(fields: [starId], references: [id])
   planets       Planet[]
-  constellation Constellation @relation(fields: [id], references: [id])
 }
 
 model Planet {
   id          Int     @id @default(autoincrement())
+  planetId    Int
   name        String
   description String?
   distance    Int
   size        Int
   type        String
   moons       String
-  star        Star    @relation(fields: [id], references: [id])
+  star        Star    @relation(fields: [planetId], references: [id])
 }
 
 model SpaceCraft {
