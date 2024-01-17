@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ConstellationPage = () => {
+const ConstellationsPage = () => {
     return (
         <div>ConstellationPage</div>
     )
 }
 
-export default ConstellationPage
+export default ConstellationsPage
