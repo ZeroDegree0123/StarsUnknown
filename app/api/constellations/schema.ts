@@ -6,3 +6,5 @@ const schema = z.object({
     stars: z.array(z.string()),
     distance: z.number(),
 })
+
+export default schema;
