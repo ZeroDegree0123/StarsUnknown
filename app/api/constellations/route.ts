@@ -6,7 +6,7 @@ import schema from "./schema"
 export async function GET(request: NextRequest) {
     const constellations = await prisma.constellation.findMany();
 
-    return NextResponse.json(constellations)
+    return NextResponse.json(constellations);
 }
 
 export async function POST(request: NextRequest) {
@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
             name: body.name,
             description: body.description,
             distance: body.distance,
-            stars: body.stars
+            // stars: body.stars
         }
     })
 

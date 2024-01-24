@@ -10,28 +10,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// model User {
-//   id    Int     @id @default(autoincrement())
-//   email String  @unique
-//   name  String?
-//   posts Post[]
-// }
-
-// model Post {
-//   id        Int     @id @default(autoincrement())
-//   title     String
-//   content   String?
-//   published Boolean @default(false)
-//   author    User    @relation(fields: [authorId], references: [id])
-//   authorId  Int
-// }
-
 model Constellation {
   id          Int     @id @default(autoincrement())
   name        String
   description String?
+  distance    String
   stars       Star[]
-  distance    Int
 }
 
 model Star {
@@ -39,8 +23,8 @@ model Star {
   starId        Int
   name          String
   description   String?
-  distance      Int
-  size          Int
+  distance      String
+  size          String
   type          String
   constellation Constellation @relation(fields: [starId], references: [id])
   planets       Planet[]
@@ -51,8 +35,8 @@ model Planet {
   planetId    Int
   name        String
   description String?
-  distance    Int
-  size        Int
+  distance    String
+  size        String
   type        String
   moons       String
   star        Star    @relation(fields: [planetId], references: [id])
@@ -63,7 +47,7 @@ model SpaceCraft {
   name        String
   description String?
   nation      String
-  yearBuilt   Int
+  yearBuilt   String
   crew        String?
 }
 

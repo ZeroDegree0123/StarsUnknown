@@ -7,8 +7,7 @@ import { useRouter } from 'next/navigation';
 interface ConstellationForm {
     name: string
     description: string
-    distance: number
-    stars: string
+    distance: string
 }
 
 const NewConstellationPage = () => {
@@ -27,7 +26,7 @@ const NewConstellationPage = () => {
                 <input type="text" {...register('name')} placeholder='Name' className='w-1/5 p-2 m-2' />
                 <textarea typeof='text' {...register('description')} placeholder='Description' className='w-1/5 p-2 m-2' />
                 <input type="text" {...register('distance')} placeholder='Distance From Earth' className='w-1/5 p-2 m-2' />
-                <input type="text" {...register('stars')} placeholder='Stars' className='w-1/5 p-2 m-2' />
+                {/* <input type="text" {...register('stars')} placeholder='Stars' className='w-1/5 p-2 m-2' /> */}
                 <input type="submit" />
             </form>
 
