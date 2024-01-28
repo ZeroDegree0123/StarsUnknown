@@ -25,5 +25,5 @@ export async function POST(request: NextRequest) {
     })
 
     return NextResponse.json(newConstellation, { status: 201 })
-
 }
+
