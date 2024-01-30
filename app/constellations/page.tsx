@@ -3,6 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import axios from 'axios'
+import ConstellationCard from '../components/ConstellationCard/ConstellationCard';
 
 interface Constellation {
     id: number;
@@ -19,11 +20,15 @@ const ConstellationsPage = async () => {
         <main className='flex justify-center items-center flex-col'>
             <div>ConstellationPage</div>
             <Link href="constellations/new" className='p-2 m-5'>New Constellation</Link>
-            {constellations.map(({ id, name, description, distance }: Constellation) => <div key={id}>
-                <p>{name}</p>
-                <p>{description}</p>
-                <p>{distance}</p>
-            </div>)}
+            {constellations.map(({ id, name, description, distance }: Constellation) => (
+                <ConstellationCard
+                    key={id}
+                    id={id}
+                    name={name}
+                    description={description}
+                    distance={distance}
+                />
+            ))}
         </main>
     )
 }
