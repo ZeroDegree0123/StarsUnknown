@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
             size: body.size,
             distance: body.distance,
             description: body.description,
-            constellation: body.constellation
+            constellationName: body.constellation
         }
     })
 

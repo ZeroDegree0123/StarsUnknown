@@ -12,6 +12,7 @@ datasource db {
 
 model Constellation {
   id          Int     @id @default(autoincrement())
+  img         String
   name        String  @unique
   description String?
   stars       Star[]
@@ -20,7 +21,8 @@ model Constellation {
 model Star {
   id                Int            @id @default(autoincrement())
   constellationName String?
-  name              String
+  name              String         @unique
+  img               String
   description       String?
   distance          String
   size              String
@@ -31,19 +33,21 @@ model Star {
 
 model Planet {
   id          Int     @id @default(autoincrement())
-  planetId    Int
+  starName    String?
+  img         String
   name        String
   description String?
   distance    String
   size        String
   type        String
   moons       String
-  star        Star    @relation(fields: [planetId], references: [id])
+  star        Star?   @relation(fields: [starName], references: [name])
 }
 
 model SpaceCraft {
   id          Int     @id @default(autoincrement())
   name        String
+  img         String
   description String?
   nation      String
   yearBuilt   String
@@ -53,6 +57,7 @@ model SpaceCraft {
 model Astronaut {
   id          Int     @id @default(autoincrement())
   name        String
+  img         String
   description String?
   nation      String
   missions    String

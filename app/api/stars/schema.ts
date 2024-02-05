@@ -6,7 +6,7 @@ const schema = z.object({
     size: z.string(),
     distance: z.string(),
     description: z.string(),
-    constellationName: z.string()
+    constellationName: z.string(),
 })
 
 export default schema;

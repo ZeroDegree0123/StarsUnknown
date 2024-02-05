@@ -1,5 +1,3 @@
-// 'use client'
-// import React, { useState, useEffect } from 'react'
 import React from 'react'
 import Link from 'next/link'
 import axios from 'axios'
@@ -13,6 +11,7 @@ interface Constellation {
 
 const ConstellationsPage = async () => {
     const res = await axios.get('http://localhost:3000/api/constellations');
+    console.log(res)
     const constellations: Constellation[] = await res.data;
 
     return (
