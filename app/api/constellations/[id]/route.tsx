@@ -34,7 +34,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
         data: {
             name: body.name,
             description: body.description,
-            distance: body.distance
+            // distance: body.distance
         }
     })
 

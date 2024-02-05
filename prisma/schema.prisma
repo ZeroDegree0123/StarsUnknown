@@ -12,22 +12,21 @@ datasource db {
 
 model Constellation {
   id          Int     @id @default(autoincrement())
-  name        String
+  name        String  @unique
   description String?
-  distance    String
   stars       Star[]
 }
 
 model Star {
-  id            Int           @id @default(autoincrement())
-  starId        Int
-  name          String
-  description   String?
-  distance      String
-  size          String
-  type          String
-  constellation Constellation @relation(fields: [starId], references: [id])
-  planets       Planet[]
+  id                Int            @id @default(autoincrement())
+  constellationName String?
+  name              String
+  description       String?
+  distance          String
+  size              String
+  type              String
+  constellation     Constellation? @relation(fields: [constellationName], references: [name])
+  planets           Planet[]
 }
 
 model Planet {

@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import prisma from "../../../prisma/client"
-import schema from "./schema"
+import prisma from "../../../../../prisma/client"
+import schema from "./schema";
 
 export async function GET(request: NextRequest) {
-    const constellations = await prisma.constellation.findMany();
+    const stars = await prisma.star.findMany()
 
-    return NextResponse.json(constellations);
+    return NextResponse.json(stars);
 }
 
 export async function POST(request: NextRequest) {
@@ -15,13 +15,16 @@ export async function POST(request: NextRequest) {
 
     if (!validation.success) return NextResponse.json(validation.error.errors, { status: 400 });
 
-    const newConstellation = await prisma.constellation.create({
+    const newStar = await prisma.star.create({
         data: {
             name: body.name,
+            type: body.type,
+            size: body.size,
+            distance: body.distance,
             description: body.description,
+            constellation: body.constellation
         }
     })
 
-    return NextResponse.json(newConstellation, { status: 201 })
+    return NextResponse.json(newStar, { status: 201 })
 }
-
