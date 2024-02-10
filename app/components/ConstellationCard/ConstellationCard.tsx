@@ -4,14 +4,16 @@ import React from 'react'
 interface Constellation {
     id: number
     name: string
+    image: string
     description: string
 }
 
-const ConstellationCard = ({ id, name, description }: Constellation) => {
+const ConstellationCard = ({ id, name, image, description }: Constellation) => {
     return (
-        <div className='border border-white m-4 p-4 w-3/4'>
-            <h1>{name} {id}</h1>
-            <p>{description}</p>
+        <div className='flex flex-row items-center justify-evenly border border-white m-4 p-4 w-3/4'>
+            <p>{image}</p>
+            <h1 className='m-0'>{name}</h1>
+            {/* <p>{description}</p> */}
             <Link href={`/constellations/${id}`}>To Constellation</Link>
         </div>
     )

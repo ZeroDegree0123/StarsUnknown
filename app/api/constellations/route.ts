@@ -18,6 +18,7 @@ export async function POST(request: NextRequest) {
     const newConstellation = await prisma.constellation.create({
         data: {
             name: body.name,
+            image: body.image,
             description: body.description,
         }
     })

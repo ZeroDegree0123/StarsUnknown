@@ -45,3 +45,19 @@ const EmbededOrder = {
     "status": "paid"
 }
 
+Star Model
+{
+        "name": "Another",
+        "type": "dwarf star",
+        "size": "really big",
+        "distance": "pretty far",
+        "description": "The star of our solar system",
+        "constellationName": "Hombre"
+}
+
+Constellation Model
+{
+        "name": "Orion",
+        "image": "img",
+        "description": "Orion is a prominent set of stars visible during winter in the northern celestial hemisphere."
+}

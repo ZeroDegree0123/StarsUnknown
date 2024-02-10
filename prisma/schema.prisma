@@ -12,9 +12,9 @@ datasource db {
 
 model Constellation {
   id          Int     @id @default(autoincrement())
-  img         String
+  image       String?
   name        String  @unique
-  description String?
+  description String? @db.VarChar(1500)
   stars       Star[]
 }
 
@@ -22,8 +22,8 @@ model Star {
   id                Int            @id @default(autoincrement())
   constellationName String?
   name              String         @unique
-  img               String
-  description       String?
+  image             String?
+  description       String?        @db.VarChar(1500)
   distance          String
   size              String
   type              String
@@ -34,9 +34,9 @@ model Star {
 model Planet {
   id          Int     @id @default(autoincrement())
   starName    String?
-  img         String
+  image       String?
   name        String
-  description String?
+  description String? @db.VarChar(1500)
   distance    String
   size        String
   type        String
@@ -47,8 +47,8 @@ model Planet {
 model SpaceCraft {
   id          Int     @id @default(autoincrement())
   name        String
-  img         String
-  description String?
+  image       String?
+  description String? @db.VarChar(1500)
   nation      String
   yearBuilt   String
   crew        String?
@@ -57,8 +57,8 @@ model SpaceCraft {
 model Astronaut {
   id          Int     @id @default(autoincrement())
   name        String
-  img         String
-  description String?
+  image       String?
+  description String? @db.VarChar(1500)
   nation      String
   missions    String
 }

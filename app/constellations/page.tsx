@@ -6,23 +6,24 @@ import ConstellationCard from '../components/ConstellationCard/ConstellationCard
 interface Constellation {
     id: number;
     name: string;
+    image: string;
     description: string;
 }
 
 const ConstellationsPage = async () => {
     const res = await axios.get('http://localhost:3000/api/constellations');
-    console.log(res)
     const constellations: Constellation[] = await res.data;
 
     return (
         <main className='flex justify-center items-center flex-col'>
             <div>ConstellationPage</div>
             <Link href="constellations/new" className='p-2 m-5'>New Constellation</Link>
-            {constellations.map(({ id, name, description }: Constellation) => (
+            {constellations.map(({ id, name, image, description }: Constellation) => (
                 <ConstellationCard
                     key={id}
                     id={id}
                     name={name}
+                    image={image}
                     description={description}
                 />
             ))}

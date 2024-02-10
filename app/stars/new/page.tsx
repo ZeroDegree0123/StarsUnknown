@@ -6,6 +6,7 @@ import axios from 'axios';
 
 interface StarForm {
     name: string
+    image: string
     type: string
     size: string
     distance: string
@@ -27,6 +28,7 @@ const NewStarPage = () => {
             }
                 className='flex flex-col justify-center items-center'>
                 <input type="text" {...register('name')} placeholder='Name' />
+                <input type="text" {...register('image')} placeholder='Image' />
                 <input type="text" {...register('type')} placeholder='Type' />
                 <input type="text" {...register('size')} placeholder='Size' />
                 <input type="text" {...register('distance')} placeholder='Distance' />
