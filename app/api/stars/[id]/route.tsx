@@ -33,8 +33,11 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
         where: { id: star.id },
         data: {
             name: body.name,
+            image: body.image,
+            type: body.type,
+            size: body.size,
+            distance: body.distance,
             description: body.description,
-            // distance: body.distance
         }
     })
 

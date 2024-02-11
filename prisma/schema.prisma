@@ -23,10 +23,10 @@ model Star {
   constellationName String?
   name              String         @unique
   image             String?
-  description       String?        @db.VarChar(1500)
-  distance          String
-  size              String
   type              String
+  size              String
+  distance          String
+  description       String?        @db.VarChar(1500)
   constellation     Constellation? @relation(fields: [constellationName], references: [name])
   planets           Planet[]
 }
@@ -34,13 +34,13 @@ model Star {
 model Planet {
   id          Int     @id @default(autoincrement())
   starName    String?
-  image       String?
   name        String
-  description String? @db.VarChar(1500)
-  distance    String
-  size        String
+  image       String?
   type        String
+  size        String
   moons       String
+  distance    String
+  description String? @db.VarChar(1500)
   star        Star?   @relation(fields: [starName], references: [name])
 }
 
@@ -48,17 +48,17 @@ model SpaceCraft {
   id          Int     @id @default(autoincrement())
   name        String
   image       String?
-  description String? @db.VarChar(1500)
+  crew        String?
   nation      String
   yearBuilt   String
-  crew        String?
+  description String? @db.VarChar(1500)
 }
 
 model Astronaut {
   id          Int     @id @default(autoincrement())
   name        String
   image       String?
-  description String? @db.VarChar(1500)
   nation      String
   missions    String
+  description String? @db.VarChar(1500)
 }
