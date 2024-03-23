@@ -21,8 +21,8 @@ const NewSpaceCraftPage = () => {
         <>
             <form onSubmit={
                 handleSubmit(async (data) => {
-                    await axios.post('/api/spaceCraft', data);
-                    router.push('/spaceCraft');
+                    await axios.post('/api/spacecraft', data);
+                    router.push('/spacecraft');
                 })
             }
                 className='flex flex-col justify-center items-center'>
