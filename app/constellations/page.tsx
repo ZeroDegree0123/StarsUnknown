@@ -7,7 +7,6 @@ interface Constellation {
     id: number;
     name: string;
     image: string;
-    description: string;
 }
 
 const ConstellationsPage = async () => {
@@ -16,15 +15,14 @@ const ConstellationsPage = async () => {
 
     return (
         <main className='flex justify-center items-center flex-col'>
-            <div>ConstellationPage</div>
+            <h1>ConstellationPage</h1>
             <Link href="constellations/new" className='p-2 m-5'>New Constellation</Link>
-            {constellations.map(({ id, name, image, description }: Constellation) => (
+            {constellations.map(({ id, name, image }: Constellation) => (
                 <ConstellationCard
                     key={id}
                     id={id}
                     name={name}
                     image={image}
-                    description={description}
                 />
             ))}
         </main>
