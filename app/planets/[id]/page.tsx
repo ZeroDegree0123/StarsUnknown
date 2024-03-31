@@ -6,6 +6,7 @@ interface Planet {
     image: string
     type: string
     size: string
+    moons: string
     distance: string
     description: string
 }
@@ -20,9 +21,22 @@ const PlanetPage = async ({ params: { id } }: Props) => {
 
     return (
         <main>
-            <h1>Planet {id}</h1>
-            <p>{planet.name}</p>
-            <p>{planet.description}</p>
+            <section>
+                <div>{planet.image}</div>
+                <div>
+                    <h1>{planet.name}</h1>
+                    <p>{planet.description}</p>
+                    <ul>
+                        <li>{planet.moons}</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h1>Other Planets</h1>
+                <div>
+                    {/* Planet Card */}
+                </div>
+            </section>
         </main>
     )
 }
