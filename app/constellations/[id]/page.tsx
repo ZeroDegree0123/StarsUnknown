@@ -5,6 +5,7 @@ interface Constellation {
     name: string
     description: string
     stars: string
+    image: string
 }
 
 interface Props {
@@ -18,9 +19,22 @@ const ContellationPage = async ({ params: { id } }: Props) => {
 
     return (
         <main>
-            <h1>Constellation {id}</h1>
-            <p>{constellation.name}</p>
-            <p>{constellation.description}</p>
+            <section>
+                <div>{constellation.image}</div>
+                <div>
+                    <h1>{constellation.name}</h1>
+                    <p>{constellation.description}</p>
+                    <ul>
+                        <li>{constellation.stars}</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h1>Other constellations</h1>
+                <div>
+                    {/* Constellation Card */}
+                </div>
+            </section>
         </main>
     )
 }
