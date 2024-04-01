@@ -20,8 +20,8 @@ const SpacecraftDetailsPage = async ({ params: { id } }: Props) => {
 
     return (
         <main>
-            <h1>Spacecraft {id}</h1>
-            <p>{spacecraft.name}</p>
+            <img src={spacecraft.image} alt="" />
+            <h1>{spacecraft.name}</h1>
             <p>{spacecraft.description}</p>
         </main>
     )
