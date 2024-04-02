@@ -23,6 +23,7 @@ const ContellationPage = async ({ params: { id } }: Props) => {
             <h1>{constellation.name}</h1>
             <p>{constellation.description}</p>
             <p>a</p>
+            <p>b</p>
         </main>
     )
 }
