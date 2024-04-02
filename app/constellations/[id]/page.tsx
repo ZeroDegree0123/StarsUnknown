@@ -22,6 +22,7 @@ const ContellationPage = async ({ params: { id } }: Props) => {
             <img src={constellation.image} alt="" />
             <h1>{constellation.name}</h1>
             <p>{constellation.description}</p>
+            <p>a</p>
         </main>
     )
 }
