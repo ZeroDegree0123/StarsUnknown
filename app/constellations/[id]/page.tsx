@@ -24,6 +24,8 @@ const ContellationPage = async ({ params: { id } }: Props) => {
             <p>{constellation.description}</p>
             <p>a</p>
             <p>b</p>
+            <p>last</p>
+            <p>b</p>
         </main>
     )
 }
