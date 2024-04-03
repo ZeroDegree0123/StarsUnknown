@@ -25,7 +25,7 @@ const ContellationPage = async ({ params: { id } }: Props) => {
             <p>a</p>
             <p>b</p>
             <p>last</p>
-            <p>b</p>
+            <p>time</p>
         </main>
     )
 }
