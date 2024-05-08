@@ -5,10 +5,7 @@ const schema = z.object({
     image: z.string(),
     type: z.string(),
     size: z.string(),
-    moons: z.string(),
-    distance: z.string(),
     description: z.string(),
-    starName: z.string(),
 })
 
 export default schema;

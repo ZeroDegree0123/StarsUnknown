@@ -9,10 +9,7 @@ interface PlanetForm {
     image: string
     type: string
     size: string
-    moons: string
-    distance: string
     description: string
-    starName: string
 }
 
 const NewPlanetPage = () => {
@@ -32,9 +29,6 @@ const NewPlanetPage = () => {
                 <input type="text" {...register('image')} placeholder='Image' />
                 <input type="text" {...register('type')} placeholder='Type' />
                 <input type="text" {...register('size')} placeholder='Size' />
-                <input type="text" {...register('moons')} placeholder='Moons' />
-                <input type="text" {...register('distance')} placeholder='Distance' />
-                <input type="text" {...register('starName')} placeholder='Star Name' />
                 <textarea typeof="text" {...register('description')} placeholder='Description' />
                 <input type='submit' />
             </form>

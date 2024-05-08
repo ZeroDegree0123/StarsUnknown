@@ -7,9 +7,8 @@ import axios from 'axios';
 interface SpaceCraftForm {
     name: string
     image: string
-    crew: string
     nation: string
-    yearBuilt: string
+    yearLaunched: string
     description: string
 }
 
@@ -28,9 +27,8 @@ const NewSpaceCraftPage = () => {
                 className='flex flex-col justify-center items-center'>
                 <input type="text" {...register('name')} placeholder='Name' />
                 <input type="text" {...register('image')} placeholder='Image' />
-                <input type="text" {...register('crew')} placeholder='Crew' />
                 <input type="text" {...register('nation')} placeholder='Nation' />
-                <input type="text" {...register('yearBuilt')} placeholder='Year Built' />
+                <input type="text" {...register('yearLaunched')} placeholder='Year Launched' />
                 <textarea typeof="text" {...register('description')} placeholder='Description' />
                 <input type='submit' />
             </form>

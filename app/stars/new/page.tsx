@@ -8,8 +8,7 @@ interface StarForm {
     name: string
     image: string
     type: string
-    size: string
-    distance: string
+    magnitude: string
     description: string
     constellationName: string
 }
@@ -30,8 +29,7 @@ const NewStarPage = () => {
                 <input type="text" {...register('name')} placeholder='Name' />
                 <input type="text" {...register('image')} placeholder='Image' />
                 <input type="text" {...register('type')} placeholder='Type' />
-                <input type="text" {...register('size')} placeholder='Size' />
-                <input type="text" {...register('distance')} placeholder='Distance' />
+                <input type="text" {...register('magnitude')} placeholder='Magnitude' />
                 <input type="text" {...register('constellationName')} placeholder='ConstellationName' />
                 <textarea typeof='text' {...register('description')} placeholder='Description' />
                 <input type="submit" />

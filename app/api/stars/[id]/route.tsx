@@ -35,8 +35,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
             name: body.name,
             image: body.image,
             type: body.type,
-            size: body.size,
-            distance: body.distance,
+            magnitude: body.magnitude,
             description: body.description,
         }
     })

@@ -36,10 +36,7 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
             image: body.image,
             type: body.type,
             size: body.size,
-            moons: body.moons,
-            distance: body.distance,
             description: body.description,
-            starName: body.starName
         }
     })
 

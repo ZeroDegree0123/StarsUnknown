@@ -19,13 +19,10 @@ const ContellationPage = async ({ params: { id } }: Props) => {
 
     return (
         <main>
-            <img src={constellation.image} alt="" />
+            {/* <img src={constellation.image} alt="" /> */}
+            <h1>Image Placeholder</h1>
             <h1>{constellation.name}</h1>
             <p>{constellation.description}</p>
-            <p>a</p>
-            <p>b</p>
-            <p>last</p>
-            <p>time</p>
         </main>
     )
 }

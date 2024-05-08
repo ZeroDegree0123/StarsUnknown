@@ -20,10 +20,7 @@ export async function POST(request: NextRequest) {
             name: body.name,
             type: body.type,
             size: body.size,
-            moons: body.moons,
-            distance: body.distance,
             description: body.description,
-            starName: body.starName
         }
     })
 

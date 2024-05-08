@@ -20,8 +20,7 @@ export async function POST(request: NextRequest) {
             name: body.name,
             image: body.image,
             nation: body.nation,
-            crew: body.crew,
-            yearBuilt: body.yearBuilt,
+            yearLaunched: body.yearLaunched,
             description: body.description,
         }
     })

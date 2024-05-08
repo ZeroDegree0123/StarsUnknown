@@ -5,8 +5,7 @@ interface Star {
     name: string
     image: string
     type: string
-    size: string
-    distance: string
+    magnitude: string
     description: string
 }
 

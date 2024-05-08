@@ -4,7 +4,6 @@ interface Spacecraft {
     id: number
     name: string
     image: string
-    crew: string
     nation: string
     yearBuilt: string
     description: string

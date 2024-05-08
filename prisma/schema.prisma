@@ -24,7 +24,7 @@ model Star {
   name              String         @unique
   image             String?
   type              String
-  magnitude         Int?
+  magnitude         String?
   description       String?        @db.VarChar(1500)
   constellation     Constellation? @relation(fields: [constellationName], references: [name])
 }

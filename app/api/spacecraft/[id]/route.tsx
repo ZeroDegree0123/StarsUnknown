@@ -34,9 +34,8 @@ export async function PUT(request: NextRequest, { params }: { params: { id: stri
         data: {
             name: body.name,
             image: body.image,
-            crew: body.crew,
             nation: body.nation,
-            yearBuilt: body.yearBuilt,
+            yearLaunched: body.yearLaunched,
             description: body.description,
         }
     })

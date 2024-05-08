@@ -19,8 +19,7 @@ export async function POST(request: NextRequest) {
         data: {
             name: body.name,
             type: body.type,
-            size: body.size,
-            distance: body.distance,
+            magnitude: body.magnitude,
             description: body.description,
             constellationName: body.constellationName
         }
