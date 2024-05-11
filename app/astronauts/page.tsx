@@ -3,6 +3,7 @@ import axios from 'axios';
 import Link from 'next/link';
 
 import AstronautsCard from '../components/AstronautsCard/AstronautsCard';
+import ListCard from '../components/ListCard/ListCard';
 
 interface Astronaut {
     id: number
@@ -19,11 +20,12 @@ const AstronautsPage = async () => {
             <h1>AstronautsPage</h1>
             <Link href="/astronauts/new" className='p-2 m-5'>Create A New Astronaut</Link>
             {astronauts.map(({ id, name, image }: Astronaut) => (
-                <AstronautsCard
+                <ListCard
                     key={id}
                     id={id}
                     name={name}
                     image={image}
+                    url='astronauts'
                 />
             ))}
         </main>

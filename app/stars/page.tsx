@@ -3,6 +3,7 @@ import axios from 'axios';
 import Link from 'next/link';
 
 import StarCard from '../components/StarCard/StarCard'
+import ListCard from '../components/ListCard/ListCard';
 
 interface Star {
     id: number
@@ -19,11 +20,12 @@ const StarsPage = async () => {
             <div>StarsPage</div>
             <Link href="/stars/new" className='p-2 m-5'>Create A New Star</Link>
             {stars.map(({ id, name, image }: Star) => (
-                <StarCard
+                <ListCard
                     key={id}
                     id={id}
                     name={name}
                     image={image}
+                    url='stars'
                 />
             ))}
         </main>

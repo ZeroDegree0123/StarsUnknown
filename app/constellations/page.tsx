@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import axios from 'axios'
-import ConstellationCard from '../components/ConstellationCard/ConstellationCard';
+import ListCard from '../components/ListCard/ListCard';
 
 interface Constellation {
     id: number;
@@ -18,11 +18,12 @@ const ConstellationsPage = async () => {
             <h1>ConstellationPage</h1>
             <Link href="constellations/new" className='p-2 m-5'>New Constellation</Link>
             {constellations.map(({ id, name, image }: Constellation) => (
-                <ConstellationCard
+                <ListCard
                     key={id}
                     id={id}
                     name={name}
                     image={image}
+                    url='constellations'
                 />
             ))}
         </main>

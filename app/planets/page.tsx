@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import axios from 'axios';
-import PlanetCard from '../components/PlanetCard/PlanetCard';
+import ListCard from '../components/ListCard/ListCard';
 
 interface Planet {
     id: number;
@@ -18,11 +18,12 @@ const PlanetsPage = async () => {
             <h1>Planets Page</h1>
             <Link href="planets/new">New Planet</Link>
             {planets.map(({ id, name, image }: Planet) => (
-                <PlanetCard
+                <ListCard
                     key={id}
                     id={id}
                     name={name}
                     image={image}
+                    url='planets'
                 />
             ))}
         </main>
