@@ -11,8 +11,7 @@ interface Category {
 const ListCard = ({ id, name, image, url }: Category) => {
     return (
         <div className='flex flex-row items-center justify-between border border-white m-4 p-4 w-3/4'>
-            {/* <p className='px-10'>{image}</p> */}
-            <img className='w-20 h-20' src={`${image}.png`} alt="" />
+            <img className='w-1/4 h-1/4' src={`${image}.png`} alt="" />
             <div className='px-10'>
                 <h1 className='m-0'>{name}</h1>
                 <Link className='underline' href={`/${url}/${id}`}>To Constellation</Link>
