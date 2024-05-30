@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 
-import StarCard from '../components/StarCard/StarCard'
 import ListCard from '../components/ListCard/ListCard';
 
 interface Star {
@@ -17,8 +16,8 @@ const StarsPage = async () => {
 
     return (
         <main className='flex justify-center items-center flex-col'>
-            <div>StarsPage</div>
-            <Link href="/stars/new" className='p-2 m-5'>Create A New Star</Link>
+            <h1 className='text-3xl p-16 text-quarternary-color'>STARS</h1>
+            {/* <Link href="/stars/new" className='p-2 m-5'>Create A New Star</Link> */}
             {stars.map(({ id, name, image }: Star) => (
                 <ListCard
                     key={id}

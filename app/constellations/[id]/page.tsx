@@ -1,3 +1,4 @@
+import "../../globals.css"
 import React from 'react'
 
 interface Constellation {
@@ -18,11 +19,16 @@ const ContellationPage = async ({ params: { id } }: Props) => {
     const constellation: Constellation = await res.json()
 
     return (
-        <main>
-            {/* <img src={constellation.image} alt="" /> */}
-            <h1>Image Placeholder</h1>
-            <h1>{constellation.name}</h1>
-            <p>{constellation.description}</p>
+        <main className='flex flex-col items-center py-16'>
+            <img className='w-1/3' src={`${constellation.image}.png`} alt="" />
+            <h1 className='text-quarternary-color p-4 m-0'>{constellation.name}</h1>
+            <p className='py-10 w-5/6 text-center text-white'>{constellation.description}</p>
+            <ul className="flex flex-row">
+                <li>stars</li>
+                <li>stars</li>
+                <li>stars</li>
+                <li>stars</li>
+            </ul>
         </main>
     )
 }

@@ -15,8 +15,8 @@ const PlanetsPage = async () => {
 
     return (
         <main className='flex justify-center items-center flex-col'>
-            <h1>Planets Page</h1>
-            <Link href="planets/new">New Planet</Link>
+            <h1 className='text-3xl p-16 text-quarternary-color'>PLANETS</h1>
+            {/* <Link href="planets/new">New Planet</Link> */}
             {planets.map(({ id, name, image }: Planet) => (
                 <ListCard
                     key={id}

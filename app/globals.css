@@ -4,6 +4,14 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
+  --primary-color: #070F2B;
+  --secondary-color: #1B1A55;
+  --tertiary-color: #535C91;
+  --quarternary-color: #9290C3;
+}
+
+.bg-layer-digital {
+  background: url('../public/svgs/layered-steps-haikei.svg') no-repeat;
 }
 
 @media (prefers-color-scheme: dark) {

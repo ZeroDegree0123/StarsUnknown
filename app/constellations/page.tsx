@@ -15,8 +15,8 @@ const ConstellationsPage = async () => {
 
     return (
         <main className='flex justify-center items-center flex-col'>
-            <h1>ConstellationPage</h1>
-            <Link href="constellations/new" className='p-2 m-5'>New Constellation</Link>
+            <h1 className='text-3xl p-16 text-quarternary-color'>CONSTELLATIONS</h1>
+            {/* <Link href="constellations/new" className='p-2 m-5'>New Constellation</Link> */}
             {constellations.map(({ id, name, image }: Constellation) => (
                 <ListCard
                     key={id}

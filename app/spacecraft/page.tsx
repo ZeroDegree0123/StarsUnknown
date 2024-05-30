@@ -16,8 +16,8 @@ const SpaceCraftPage = async () => {
 
     return (
         <main className='flex justify-center items-center flex-col'>
-            <div>StarsPage</div>
-            <Link href="/spacecraft/new" className='p-2 m-5'>Create A Spacecraft</Link>
+            <h1 className='text-3xl p-16 text-quarternary-color'>SPACECRAFT</h1>
+            {/* <Link href="/spacecraft/new" className='p-2 m-5'>Create A Spacecraft</Link> */}
             {spacecraft.map(({ id, name, image }: Spacecraft) => (
                 <ListCard
                     key={id}
