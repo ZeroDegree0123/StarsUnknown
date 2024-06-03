@@ -1,7 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import axios from 'axios'
+
 import ListCard from '../components/ListCard/ListCard';
+
 
 interface Constellation {
     id: number;
@@ -9,13 +11,14 @@ interface Constellation {
     image: string;
 }
 
+
 const ConstellationsPage = async () => {
     const res = await axios.get('http://localhost:3000/api/constellations');
     const constellations: Constellation[] = await res.data;
 
     return (
         <main className='flex justify-center items-center flex-col'>
-            <h1 className='text-3xl p-16 text-quarternary-color'>CONSTELLATIONS</h1>
+            <h1 className='text-4xl my-10 p-16 text-quarternary-color'>CONSTELLATIONS</h1>
             {/* <Link href="constellations/new" className='p-2 m-5'>New Constellation</Link> */}
             {constellations.map(({ id, name, image }: Constellation) => (
                 <ListCard

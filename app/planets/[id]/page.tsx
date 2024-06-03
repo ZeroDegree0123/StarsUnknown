@@ -20,21 +20,16 @@ const PlanetPage = async ({ params: { id } }: Props) => {
     const planet: Planet = await res.json();
 
     return (
-        <main>
-            <section>
-                <div>{planet.image}</div>
-                <div>
-                    <h1>{planet.name}</h1>
-                    <p>{planet.description}</p>
-                    <ul>
-                        <li>{planet.moons}</li>
-                    </ul>
-                </div>
-            </section>
-            <section>
-                <h1>Other Planets</h1>
-                <div>
-                    {/* Planet Card */}
+        <main className='flex justify-center items-center h-screen w-full'>
+            <img className='w-1/3 m-8 rounded-full' src={`${planet.image}.png`} alt="" />
+            <section className='flex flex-row w-4/5 pr-8'>
+                <div className=''>
+                    <h1 className='text-4xl border-b pb-2'>{planet.name}</h1>
+                    <div className='flex flex-row justify-evenly my-10'>
+                        <p className='text-center border-r-2 w-1/2 text-3xl p-10'>{planet.size}</p>
+                        <p className='text-center w-1/2 text-3xl p-10'>{planet.type}</p>
+                    </div>
+                    <p className='border-t pt-2'>{planet.description}</p>
                 </div>
             </section>
         </main>

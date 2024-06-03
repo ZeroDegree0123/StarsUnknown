@@ -16,7 +16,7 @@ const StarsPage = async () => {
 
     return (
         <main className='flex justify-center items-center flex-col'>
-            <h1 className='text-3xl p-16 text-quarternary-color'>STARS</h1>
+            <h1 className='text-3xl my-10 p-16 text-quarternary-color'>STARS</h1>
             {/* <Link href="/stars/new" className='p-2 m-5'>Create A New Star</Link> */}
             {stars.map(({ id, name, image }: Star) => (
                 <ListCard

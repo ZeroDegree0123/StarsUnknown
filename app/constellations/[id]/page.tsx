@@ -19,16 +19,18 @@ const ContellationPage = async ({ params: { id } }: Props) => {
     const constellation: Constellation = await res.json()
 
     return (
-        <main className='flex flex-col items-center py-16'>
+        <main className='flex flex-col items-center pt-20 h-full'>
             <img className='w-1/3' src={`${constellation.image}.png`} alt="" />
-            <h1 className='text-quarternary-color p-4 m-0'>{constellation.name}</h1>
-            <p className='py-10 w-5/6 text-center text-white'>{constellation.description}</p>
-            <ul className="flex flex-row">
-                <li>stars</li>
-                <li>stars</li>
-                <li>stars</li>
-                <li>stars</li>
-            </ul>
+            <h1 className='text-quarternary-color text-center p-4 m-0 border-b w-3/4'>{constellation.name}</h1>
+            <div className="flex flex-row justify-center w-3/4">
+                <p className='py-10 w-5/6 text-left text-white'>{constellation.description}</p>
+                <ul className="flex flex-col justify-evenly items-center w-full">
+                    <li>stars</li>
+                    <li>stars</li>
+                    <li>stars</li>
+                    <li>stars</li>
+                </ul>
+            </div>
         </main>
     )
 }

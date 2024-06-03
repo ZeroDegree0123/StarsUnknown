@@ -25,3 +25,9 @@
     @apply font-bold text-2xl mb-3;
   }
 }
+
+#constellations-background {
+  background:
+    linear-gradient(65deg, var(--primary-faded), var(--primary-faded)),
+    url('https://imgur.com/aRsYE9f.png') no-repeat center center / cover;
+}

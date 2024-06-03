@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const NavBar = () => {
     return (
-        <div className='flex justify-between p-8 space-x-5' style={{ background: '#070F2B' }}>
+        <div className='flex justify-between p-8 space-x-5 absolute w-full z-50'>
             <Link className='text-white' href="/">Home</Link>
             <div className='space-x-5'>
                 <Link className='text-white' href="/constellations">Constellations</Link>
