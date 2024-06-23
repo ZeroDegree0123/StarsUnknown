@@ -25,8 +25,14 @@ const StarPage = async ({ params: { id } }: Props) => {
                 <div className=''>
                     <h1 className='text-4xl border-b pb-2'>{star.name}</h1>
                     <div className='flex flex-row justify-evenly my-10'>
-                        <p className='text-center border-r-2 w-1/2 text-3xl p-10'>magnitude {star.magnitude}</p>
-                        <p className='text-center w-1/2 text-3xl p-10'>Class {star.type}</p>
+                        <div className='text-center border-r-2 w-1/2 p-10'>
+                            <p className='text-4xl p-1'>{star.magnitude}</p>
+                            <p>magnitude</p>
+                        </div>
+                        <div className='text-center w-1/2 p-10'>
+                            <p className='text-center text-4xl p-1'>{star.type}</p>
+                            <p>class</p>
+                        </div>
                     </div>
                     <p className='border-t pt-2'>{star.description}</p>
                 </div>

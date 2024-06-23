@@ -18,14 +18,21 @@ const SpacecraftDetailsPage = async ({ params: { id } }: Props) => {
     const spacecraft: Spacecraft = await res.json();
 
     return (
-        <main className='flex flex-col items-center justify-center h-screen'>
-            <h1 className='pt-20 border-b w-2/3 text-center p-2'>{spacecraft.name}</h1>
-            <img className='w-1/3' src={`${spacecraft.image}.png`} alt="" />
-            <div className='flex flex-row justify-between w-4/5 p-20'>
-                <p>{spacecraft.nation}</p>
-                <p>{spacecraft.yearLaunched}</p>
+        <main className='flex flex-col items-center justify-center h-full pt-20'>
+            <img className='w-1/3 pt-10' src={`${spacecraft.image}.png`} alt="" />
+            <h1 className='border-b w-2/3 text-center p-2 mt-10'>{spacecraft.name}</h1>
+            <div className='flex flex-row justify-evenly w-4/5 p-10'>
+                <div className='flex flex-col items-center'>
+                    <p className='text-4xl'>{spacecraft.nation}</p>
+                    <p>Nation</p>
+                </div>
+                <br />
+                <div className='flex flex-col items-center'>
+                    <p className='text-4xl'>{spacecraft.yearLaunched}</p>
+                    <p>Year Lauched</p>
+                </div>
             </div>
-            <p className='w-4/5 text-center'>{spacecraft.description}</p>
+            <p className='w-4/5 text-center mb-20'>{spacecraft.description}</p>
         </main>
     )
 }
