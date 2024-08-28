@@ -20,17 +20,17 @@ const AstronautPage = async ({ params: { id } }: Props) => {
 
     return (
         <main className='flex justify-center items-top h-screen w-full'>
-            <img className='w-1/3 m-8' src={`${astronaut.image}.png`} alt="" />
-            <section className='flex flex-col w-2/3 pr-8'>
+            <img className='w-1/2 m-8' src={`${astronaut.image}.png`} alt="" />
+            <section className='flex flex-col w-2/3 pr-8 my-8'>
                 <h1 className='text-4xl border-b pb-2'>{astronaut.name}</h1>
                 <div className='flex flex-row justify-evenly my-10'>
                     <div className='text-center border-r-2 w-1/2 p-10'>
+                        <p>Nation</p>
                         <p className='text-4xl p-1'>{astronaut.nation}</p>
-                        <p>magnitude</p>
                     </div>
                     <div className='text-center w-1/2 p-10'>
+                        <p>Missions</p>
                         <p className='text-center text-4xl p-1'>{astronaut.missions}</p>
-                        <p>class</p>
                     </div>
                 </div>
                 <p className='border-t pt-2'>{astronaut.description}</p>

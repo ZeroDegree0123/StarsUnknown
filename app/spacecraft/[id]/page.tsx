@@ -23,13 +23,13 @@ const SpacecraftDetailsPage = async ({ params: { id } }: Props) => {
             <h1 className='border-b w-2/3 text-center p-2 mt-10'>{spacecraft.name}</h1>
             <div className='flex flex-row justify-evenly w-4/5 p-10'>
                 <div className='flex flex-col items-center'>
-                    <p className='text-4xl'>{spacecraft.nation}</p>
                     <p>Nation</p>
+                    <p className='text-4xl'>{spacecraft.nation}</p>
                 </div>
                 <br />
                 <div className='flex flex-col items-center'>
-                    <p className='text-4xl'>{spacecraft.yearLaunched}</p>
                     <p>Year Lauched</p>
+                    <p className='text-4xl'>{spacecraft.yearLaunched}</p>
                 </div>
             </div>
             <p className='w-4/5 text-center mb-20'>{spacecraft.description}</p>
