@@ -42,8 +42,9 @@ const ContellationPage = async ({ params: { id } }: Props) => {
             <h1 className='text-quarternary-color text-center p-4 m-0 border-b w-3/4'>{constellation.name}</h1>
             <div className="flex flex-row justify-center w-3/4">
                 <p className='py-10 w-5/6 text-left text-white'>{constellation.description}</p>
-                <ul className="flex flex-col justify-evenly items-center w-full">
-                    <li>{superStars}</li>
+                <ul className="flex flex-col justify-start items-center w-full pt-10">
+                    <h2 className="font-bold">STARS</h2>
+                    <li className="pt-6">{superStars}</li>
                 </ul>
             </div>
         </main>
