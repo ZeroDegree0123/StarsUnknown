@@ -2,12 +2,15 @@ import React from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 
-import ListCard from '../components/ListCard/ListCard';
+import SpacecraftCard from '../components/SpacecraftCard/SpacecraftCard'
 
 interface Spacecraft {
     id: number
     name: string
     image: string
+    description: string
+    missions: string
+    nation: string
 }
 
 const SpaceCraftPage = async () => {
@@ -18,12 +21,15 @@ const SpaceCraftPage = async () => {
         <main className='flex justify-center items-center flex-col'>
             <h1 className='text-3xl p-10 text-quarternary-color'>SPACECRAFT</h1>
             {/* <Link href="/spacecraft/new" className='p-2 m-5'>Create A Spacecraft</Link> */}
-            {spacecraft.map(({ id, name, image }: Spacecraft) => (
-                <ListCard
+            {spacecraft.map(({ id, name, image, description, missions, nation }: Spacecraft) => (
+                <SpacecraftCard
                     key={id}
                     id={id}
                     name={name}
                     image={image}
+                    description={description}
+                    missions={missions}
+                    nation={nation}
                     url='spacecraft'
                 />
             ))}

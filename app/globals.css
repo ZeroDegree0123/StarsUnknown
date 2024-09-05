@@ -26,8 +26,12 @@
   }
 }
 
-#constellations-background {
+#constellation-bg {
   background:
-    linear-gradient(65deg, var(--primary-faded), var(--primary-faded)),
-    url('https://imgur.com/aRsYE9f.png') no-repeat center center / cover;
+    linear-gradient(180deg, var(--primary-color), rgba(0, 0, 0, 0)),
+    url('https://imgur.com/nUCuS9Y.png') no-repeat center center / cover;
+}
+
+#section {
+  background: url('https://imgur.com/XnbjPDS.png') no-repeat center center / cover;
 }
